@@ -20,6 +20,11 @@
     justify-content: space-between;
 }
 
+.div__banner>header>button {
+    background-color: transparent;
+    border: none;
+}
+
 #img__abrir{
     display: none;
 }
