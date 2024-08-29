@@ -1,0 +1,120 @@
+/* sessão sobre mim */
+.section__sobremim {
+    /* background-color: aqua; */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+section>div:first-child {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+div.div__quadrado {
+    position: absolute;
+    right: 0.1px;
+    z-index: -1;
+    width: 21px;
+    height: 21px;
+    background-color: var(--cor4);
+    padding: 0 5px;
+}
+
+.section__sobremim>div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 57px;
+    /* height: 100%; */
+    /* background-color: bisque; */
+    gap: 57px;
+}
+
+.div__foto {
+    position: relative;
+}
+
+.div__foto>div:first-child {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.div__foto>div:nth-child(2) {
+    display: flex;
+    position: relative;
+    left: -50px;
+    bottom: 26px;
+}
+
+.div__foto>div:nth-child(2)>p {
+    position: absolute;
+    left: -135px;
+    bottom: 7px;
+    font-weight: bold;
+}
+
+.div__foto>div:nth-child(3) {
+    position: absolute;
+    left: 91px;
+    bottom: -147px;
+}
+
+.div__foto>div:nth-child(3)>p {
+    position: absolute;
+    left: 109px;
+    bottom: -58px;
+    font-weight: bold;
+}
+
+.div__foto>div:nth-child(4) {
+    position: absolute;
+    right: 0;
+    bottom: -79px;
+}
+
+.div__foto>div:nth-child(4)>p{
+    position: absolute;
+    left: 165px;
+    bottom: -15px;
+    font-weight: bold;
+}
+
+.div__foto>div>img {
+    max-width: 350px;
+    max-height: 350px;
+}
+
+.div__foto>div>img:nth-child(2) {
+    position: absolute;
+    left: 24px;
+}
+
+.div__texto {
+    width: 100%;
+    max-width: 400px;
+    /* background-color: blueviolet; */
+}
+
+.div__texto>span {
+    font-weight: 800;
+    color: var(--cor2);
+    font-size: 20px;
+}
+
+.div__texto>span>span {
+    width: 100%;
+    background-color: var(--cor1);
+    padding: 0 5px;
+}
+
+.div__texto>p {
+    margin-top: 11px;
+    color: var(--cor3);
+    font-size: 18px;
+}
