@@ -23,6 +23,7 @@
 .div__banner>header>button {
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 #img__abrir{

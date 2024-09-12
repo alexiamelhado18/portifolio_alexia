@@ -9,6 +9,7 @@
     height: 100vh;
     background-color: #FFF;
     padding: 20px 140px;
+    z-index: 1;
 }
 
 .div__menuresponsivo>header {
@@ -22,6 +23,7 @@
 .div__menuresponsivo>header>button {
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .div__menuresponsivo>nav {

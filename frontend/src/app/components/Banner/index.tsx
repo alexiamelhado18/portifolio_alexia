@@ -16,10 +16,14 @@ export function Banner() {
     const [abrirModalMenuResponsivo, setAbrirModalMenuResponsivo] = useState<boolean>(false);
 
     function abrirMenuResponsivo() {
+        let elementBody = document.getElementsByTagName("body")[0];
+        elementBody.style.overflow = "hidden";
         setAbrirModalMenuResponsivo(true);
     }
 
     function fecharMenuResponsivo() {
+        let elementBody = document.getElementsByTagName("body")[0];
+        elementBody.style.overflow = "auto";
         setAbrirModalMenuResponsivo(false);
     }
 
