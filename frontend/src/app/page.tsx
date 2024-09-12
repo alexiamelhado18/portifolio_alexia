@@ -1,7 +1,47 @@
+'use client';
+
+import { useEffect, useState } from "react";
 //estilização
 import "./style.css";
 
 export default function Home() {
+
+  const [currentWork, setCurrentWork] = useState<string>("logos");
+
+  function animateForClickedWork(current: string) {
+
+    setCurrentWork(current);
+
+    let elementWorkLogos = document.getElementsByClassName("div__logos")[0];
+
+    let elementWorkCliqx = document.getElementsByClassName("div__cliqx")[0];
+
+    let elementWorkSenai = document.getElementsByClassName("div__senai")[0];
+
+    switch (current) {
+      case "logos":
+        elementWorkLogos.classList.add("animation__surgir");
+        elementWorkCliqx.classList.remove("animation__surgir");
+        elementWorkSenai.classList.remove("animation__surgir");
+
+        break;
+      case "cliqx":
+        elementWorkCliqx.classList.add("animation__surgir");
+        elementWorkLogos.classList.remove("animation__surgir");
+        elementWorkSenai.classList.remove("animation__surgir");
+
+        break;
+      case "senai":
+        elementWorkSenai.classList.add("animation__surgir");
+        elementWorkLogos.classList.remove("animation__surgir");
+        elementWorkCliqx.classList.remove("animation__surgir");
+
+        break;
+      default:
+        break;
+    }
+  }
+
   return (
     <>
       <section className="section__sobremim">
@@ -22,7 +62,7 @@ export default function Home() {
               <img src="/assets/images/svg/Seta esquerda com volta.svg" alt="" />
               <p>Comunicativa</p>
             </div>
-            
+
             <div>
               <img src="/assets/images/svg/Seta direita.svg" alt="" />
               <p>Técnica em Desenvolvimento de sistemas</p>
@@ -38,6 +78,65 @@ export default function Home() {
             <span>Eu sou <span>Aléxia,</span></span>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam.</p>
           </div>
+        </div>
+      </section>
+      <section className="section__experiencia">
+        <div>
+          <h2>Experiência</h2>
+          <div className="div__quadrado"></div>
+
+        </div>
+
+        <div>
+          <header>
+            <div>
+              <button type="button" onClick={() => animateForClickedWork("logos")}>
+                <h3>Logos</h3>
+                <div className="div__logos animation__surgir"></div>
+              </button>
+
+              <button type="button" onClick={() => animateForClickedWork("cliqx")}>
+                <h3>Cliqx</h3>
+                <div className="div__cliqx"></div>
+              </button>
+
+              <button type="button" onClick={() => animateForClickedWork("senai")}>
+                <h3>SENAI</h3>
+                <div className="div__senai"></div>
+              </button>
+            </div>
+          </header>
+          {
+            currentWork === "senai" && (
+              <>
+                <div>
+                  <h2>Instrutora de Formação Profissional II</h2>
+
+                  <span>dez/2022 — Atual</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam.</p>
+
+                <div>
+                  <div>
+                    <span>React</span>
+                  </div>
+                  <div>
+                    <span>React</span>
+                  </div>
+                  <div>
+                    <span>React</span>
+                  </div>
+                  <div>
+                    <span>React</span>
+                  </div>
+                  <div>
+                    <span>React</span>
+                  </div>
+                </div>
+              </>
+            )
+          }
+
         </div>
       </section>
     </>
