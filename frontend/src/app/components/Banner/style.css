@@ -5,10 +5,10 @@
     flex-direction: column;
     height: 100vh;
     padding: 20px 140px;
-    /* background-image: url("../../../../public/assets/images/svg/Banner.svg"); */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* background-position: center; */
+    background-image: url("../../../../public/assets/images/svg/Banner.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
 }
 
 .div__banner>header {

@@ -13,7 +13,6 @@ import { MenuResponsivoModal } from "../MenuResponsivoModal";
 
 export function Banner() {
 
-    const [responsivo, setResponsivo] = useState(false);
     const [abrirModalMenuResponsivo, setAbrirModalMenuResponsivo] = useState<boolean>(false);
 
     function abrirMenuResponsivo() {
@@ -24,20 +23,9 @@ export function Banner() {
         setAbrirModalMenuResponsivo(false);
     }
 
-    useLayoutEffect(() => {
-        window.addEventListener("resize", () => {
-            if (window.innerWidth <= 500) {
-                setResponsivo(true);
-            } else {
-                setResponsivo(false);
-            }
-        });
-
-    }, []);
-
     return (
         <>
-            <div className="div__banner" style={responsivo ? { background: "linear-gradient(260deg, rgba(255, 225, 214, 1) 0%, rgba(236, 227, 255, 1) 100%)" } : { backgroundImage: `url("/assets/images/svg/Banner.svg")`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
+            <div className="div__banner">
                 <header>
                     <img src="/assets/images/svg/Logo.svg" alt="Logo que representa um tag html, formada pela letra A, / e V, deitados na horizontal." />
 
