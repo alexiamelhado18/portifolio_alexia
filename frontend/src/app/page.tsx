@@ -44,7 +44,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="section__sobremim">
+      <section id="section__sobremim">
 
         <div>
           <h2>Sobre mim</h2>
@@ -80,7 +80,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="section__experiencia">
+      <section id="section__experiencia">
         <div>
           <h2>Experiência</h2>
           <div className="div__quadrado"></div>
@@ -139,7 +139,7 @@ export default function Home() {
 
         </div>
       </section>
-      <section className="section__tecnologias">
+      <section id="section__tecnologias">
         <div>
           <img src="/assets/images/png/js.png" alt="" />
           <img src="/assets/images/png/css.png" alt="" />
