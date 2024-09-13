@@ -4,9 +4,48 @@ import { useEffect, useState } from "react";
 //estilização
 import "./style.css";
 
+interface Project {
+  link: string,
+  description: string,
+  techs: string[]
+}
+
 export default function Home() {
 
   const [currentWork, setCurrentWork] = useState<string>("senai");
+
+  const [projects, setProjects] = useState<Project[]>([
+    {
+      link: "https://github.com/alexiamelhado18/nlw-journey-react",
+      description: "Projeto desenvolvido na semana do NLW Journey",
+      techs: ["React", "Tailwind", "TypeScript"]
+    },
+    {
+      link: "https://github.com/alexiamelhado18/project-to-do-list",
+      description: "Projeto referente a uma lista de tarefas",
+      techs: ["React", "styled-components", "TypeScript"]
+    },
+    {
+      link: "https://github.com/alexiamelhado18/desafios-codelandia/tree/main/desafio-01",
+      description: "Projeto referente ao desafio 01 da comunidade codelandia",
+      techs: ["Vue", "JavaScript"]
+    },
+    {
+      link: "https://github.com/alexiamelhado18/desafios-codelandia/tree/main/desafio-02",
+      description: "Projeto referente ao desafio 02 da comunidade codelandia",
+      techs: ["Vue", "JavaScript"]
+    },
+    {
+      link: "https://github.com/alexiamelhado18/desafios-codelandia/tree/main/desafio-03",
+      description: "Projeto referente ao desafio 03 da comunidade codelandia",
+      techs: ["Vue", "JavaScript"]
+    },
+    {
+      link: "https://github.com/alexiamelhado18/frontADS2022TCC-casaleite",
+      description: "TCC - e-commerce de materiais de construção civil",
+      techs: ["Vue", "JavaScript", "Pyhton", "Flask", "MySQL"]
+    }
+  ]);
 
   function animateForClickedWork(current: string) {
 
@@ -141,19 +180,48 @@ export default function Home() {
       </section>
       <section id="section__tecnologias">
         <div>
-          <img src="/assets/images/png/js.png" alt="" />
-          <img src="/assets/images/png/css.png" alt="" />
-          <img src="/assets/images/png/sqlserver.png" alt="" />
-          <img src="/assets/images/png/html.png" alt="" />
-          <img src="/assets/images/png/less.png" alt="" />
-          <img src="/assets/images/png/jquery.png" alt="" />
-          <img src="/assets/images/png/react.png" alt="" />
-          <img src="/assets/images/png/tailwind.png" alt="" />
-          <img src="/assets/images/png/bootstrap.png" alt="" />
-          <img src="/assets/images/png/vue.png" alt="" />
-          <img src="/assets/images/png/mysql.png" alt="" />
-          <img src="/assets/images/png/kotlin.png" alt="" />
+          <img src="/assets/images/png/js.png" alt="" title="js" />
+          <img src="/assets/images/png/css.png" alt="" title="css" />
+          <img src="/assets/images/png/sqlserver.png" alt="" title="sqlserver" />
+          <img src="/assets/images/png/html.png" alt="" title="html" />
+          <img src="/assets/images/png/less.png" alt="" title="less" />
+          <img src="/assets/images/png/jquery.png" alt="" title="jquery" />
+          <img src="/assets/images/png/react.png" alt="" title="react" />
+          <img src="/assets/images/png/tailwind.png" alt="" title="tailwind" />
+          <img src="/assets/images/png/bootstrap.png" alt="" title="bootstrap" />
+          <img src="/assets/images/png/vue.png" alt="" title="vue" />
+          <img src="/assets/images/png/mysql.png" alt="" title="mysql" />
+          <img src="/assets/images/png/kotlin.png" alt="" title="kotlin" />
         </div>
+      </section>
+      <section id="section__projetos">
+        <div>
+          <h2>Projetos</h2>
+          <div className="div__quadrado"></div>
+        </div>
+        <div>
+          <div>
+            {
+              projects.map((project: Project, index: Number) => {
+                return <div key={index.toString()}>
+                  <h3>Nome do projeto</h3>
+                  <p>{project.description}</p>
+                  <div>
+                    {
+                      project.techs.map((tech: string) => {
+                        return <div>
+                          <span title={tech}>{tech}</span>
+                        </div>
+                      })
+                    }
+                  </div>
+                </div>
+              })
+            }
+
+          </div>
+        </div>
+
       </section>
     </>
   );
