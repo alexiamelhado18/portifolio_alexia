@@ -29,7 +29,7 @@ export function Banner() {
 
     return (
         <>
-            <div className="div__banner">
+            <div id="div__banner">
                 <header>
                     <img src="/assets/images/svg/Logo.svg" alt="Logo que representa um tag html, formada pela letra A, / e V, deitados na horizontal." />
 
@@ -42,13 +42,13 @@ export function Banner() {
                         <ul>
                             <li>
                                 <div className="div__seta"></div>
-                                <Link href={"#"}>inicial</Link>
+                                <Link href={"/#div__banner"}>inicial</Link>
                             </li>
                             <li>
-                                <Link href={"#"}>sobre mim</Link>
+                                <Link href={"/#section__sobremim"}>sobre mim</Link>
                             </li>
                             <li>
-                                <Link href={"#"}>experiência</Link>
+                                <Link href={"/#section__experiencia"}>experiência</Link>
                             </li>
                             <li>
                                 <Link href={"#"}>projetos</Link>
