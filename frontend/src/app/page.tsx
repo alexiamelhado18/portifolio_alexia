@@ -6,7 +6,7 @@ import "./style.css";
 
 export default function Home() {
 
-  const [currentWork, setCurrentWork] = useState<string>("logos");
+  const [currentWork, setCurrentWork] = useState<string>("senai");
 
   function animateForClickedWork(current: string) {
 
@@ -92,7 +92,7 @@ export default function Home() {
             <div>
               <button type="button" onClick={() => animateForClickedWork("logos")}>
                 <h3>Logos</h3>
-                <div className="div__logos animation__surgir"></div>
+                <div className="div__logos"></div>
               </button>
 
               <button type="button" onClick={() => animateForClickedWork("cliqx")}>
@@ -102,7 +102,7 @@ export default function Home() {
 
               <button type="button" onClick={() => animateForClickedWork("senai")}>
                 <h3>SENAI</h3>
-                <div className="div__senai"></div>
+                <div className="div__senai animation__surgir"></div>
               </button>
             </div>
           </header>
@@ -137,6 +137,22 @@ export default function Home() {
             )
           }
 
+        </div>
+      </section>
+      <section className="section__tecnologias">
+        <div>
+          <img src="/assets/images/png/js.png" alt="" />
+          <img src="/assets/images/png/css.png" alt="" />
+          <img src="/assets/images/png/sqlserver.png" alt="" />
+          <img src="/assets/images/png/html.png" alt="" />
+          <img src="/assets/images/png/less.png" alt="" />
+          <img src="/assets/images/png/jquery.png" alt="" />
+          <img src="/assets/images/png/react.png" alt="" />
+          <img src="/assets/images/png/tailwind.png" alt="" />
+          <img src="/assets/images/png/bootstrap.png" alt="" />
+          <img src="/assets/images/png/vue.png" alt="" />
+          <img src="/assets/images/png/mysql.png" alt="" />
+          <img src="/assets/images/png/kotlin.png" alt="" />
         </div>
       </section>
     </>
