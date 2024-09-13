@@ -281,6 +281,94 @@ div.div__quadrado {
     }
   } */
 
+/* sessão projetos */
+#section__projetos {
+    /* background-color: aqua; */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 57px;
+}
+
+#section__projetos>div:nth-child(2) {
+    /* background-color: rgb(0, 255, 145); */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section__projetos>div:nth-child(2)>div {
+    /* background-color: brown; */
+    max-width: 1057px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 57px;
+}
+
+#section__projetos>div:nth-child(2)>div>div {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 41px;
+    max-width: 500px;
+    width: 100%;
+    height: 300px;
+    border: 1px solid var(--cor1);
+    border-radius: 50px;
+    padding: 20px;
+}
+
+#section__projetos>div:nth-child(2)>div>div:hover {
+    background-color: var(--cor7);
+}
+
+#section__projetos>div:nth-child(2)>div>div>h3 {
+    color: var(--cor2);
+    font-size: 20px;
+}
+
+#section__projetos>div:nth-child(2)>div>div>p {
+    max-width: 440px;
+    /* text-overflow: ellipsis; */
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
+    color: var(--cor3);
+}
+
+#section__projetos>div:nth-child(2)>div>div>div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#section__projetos>div:nth-child(2)>div>div>div>div {
+    width: 100px;
+    height: 34px;
+    background-color: var(--cor1);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section__projetos>div:nth-child(2)>div>div>div>div>span {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--cor2);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px;
+}
+
 @media only screen and (max-width: 350px) {
     .div__foto>div {
         width: 100%;
