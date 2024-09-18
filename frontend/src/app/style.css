@@ -2,6 +2,7 @@ section>div:first-child {
     position: relative;
     display: flex;
     align-items: center;
+    z-index: 1;
 }
 
 div.div__quadrado {
@@ -284,7 +285,7 @@ div.div__quadrado {
 /* sessão projetos */
 #section__projetos {
     /* background-color: aqua; */
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -306,6 +307,7 @@ div.div__quadrado {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 57px;
 }
 
@@ -339,6 +341,7 @@ div.div__quadrado {
     /* overflow: hidden; */
     /* white-space: nowrap; */
     color: var(--cor3);
+    font-size: 18px;
 }
 
 #section__projetos>div:nth-child(2)>div>div>div {
@@ -369,6 +372,31 @@ div.div__quadrado {
     padding: 10px;
 }
 
+/* sessão contato */
+#section__contato {
+    background-color: var(--cor8);
+    width: calc(100% + 280px);
+    padding: 57px 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 57px;
+}
+
+#section__contato>p {
+    color: var(--cor3);
+    font-size: 18px;
+}
+
+#section__contato>div:nth-child(3) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 41px;
+    width: 100%;
+    margin-top: 57px;
+}
+
 @media only screen and (max-width: 350px) {
     .div__foto>div {
         width: 100%;
@@ -382,6 +410,12 @@ div.div__quadrado {
 @media only screen and (max-width: 730px) {
     #section__tecnologias {
         width: calc(100% + 40px);
+    }
+
+    #section__contato {
+        width: calc(100% + 40px);
+        padding: 57px 20px;
+
     }
 }
 
