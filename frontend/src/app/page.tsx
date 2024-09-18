@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 //estilização
 import "./style.css";
+import Link from "next/link";
 
 interface Project {
   link: string,
@@ -209,11 +210,18 @@ export default function Home() {
                   <div>
                     {
                       project.techs.map((tech: string) => {
-                        return <div>
-                          <span title={tech}>{tech}</span>
-                        </div>
+                        return (
+                          project.techs.length <= 3 && (
+                            <div>
+                              <span title={tech}>{tech}</span>
+                            </div>
+                          ))
                       })
                     }
+                    {
+                      project.techs.length > 3 && <p>+{project.techs.length - 3}</p>
+                    }
+
                   </div>
                 </div>
               })
@@ -221,7 +229,24 @@ export default function Home() {
 
           </div>
         </div>
-
+      </section>
+      <section id="section__contato">
+        <div>
+          <h2>Contato</h2>
+          <div className="div__quadrado"></div>
+        </div>
+        <p>Obrigada por ter visitado meu portfólio. Caso queira entrar em contato comigo, acesse por esses canais abaixo.</p>
+        <div>
+          <Link href={"#"}>
+            <img src="/assets/images/png/github.png" alt="" />
+          </Link>
+          <Link href={"#"}>
+            <img src="/assets/images/png/linkedin.png" alt="" />
+          </Link>
+          <Link href={"#"}>
+            <img src="/assets/images/png/email.png" alt="" />
+          </Link>
+        </div>
       </section>
     </>
   );
