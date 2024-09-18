@@ -15,6 +15,7 @@
   --cor5: #F4F4F4;
   --cor6: #FFF7F4;
   --cor7: #ffe1d625;
+  --cor8: #FFF7F4;
 }
 
 h2 {
@@ -26,13 +27,12 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 57px;
-  margin-top: 57px;
-  padding: 20px 140px;
+  padding: 0 140px;
 }
 
 @media only screen and (max-width: 730px) {
   main {
-    padding: 20px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
