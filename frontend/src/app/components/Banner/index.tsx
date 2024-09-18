@@ -51,10 +51,10 @@ export function Banner() {
                                 <Link href={"/#section__experiencia"}>experiência</Link>
                             </li>
                             <li>
-                                <Link href={"#"}>projetos</Link>
+                                <Link href={"/#section__projetos"}>projetos</Link>
                             </li>
                             <li>
-                                <Link href={"#"}>contato</Link>
+                                <Link href={"/#section__contato"}>contato</Link>
                             </li>
                         </ul>
                     </nav>
