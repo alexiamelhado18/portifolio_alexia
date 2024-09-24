@@ -248,14 +248,14 @@ export default function Home() {
         </div>
         <p>Obrigada por ter visitado meu portfólio. Caso queira entrar em contato comigo, acesse por esses canais abaixo.</p>
         <div>
-          <Link href={"#"}>
-            <img src="/assets/images/png/github.png" alt="" />
+          <Link href={"https://github.com/alexiamelhado18"} target="_blank">
+            <img src="/assets/images/png/github.png" alt="Ícone do github" />
           </Link>
-          <Link href={"#"}>
-            <img src="/assets/images/png/linkedin.png" alt="" />
+          <Link href={"https://www.linkedin.com/in/al%C3%A9xia-vit%C3%B3ria-b0ab08169/"} target="_blank">
+            <img src="/assets/images/png/linkedin.png" alt="Ícone do linkedin" />
           </Link>
-          <Link href={"#"}>
-            <img src="/assets/images/png/email.png" alt="" />
+          <Link href={"mailto:alexiavitoria.dev@gmail.com"} target="_blank">
+            <img src="/assets/images/png/email.png" alt="Ícone de e-mail" />
           </Link>
         </div>
       </section>
