@@ -1,12 +1,26 @@
 'use client';
 
+//hooks
 import { useEffect, useState } from "react";
+
 //estilização
 import "./style.css";
 import Link from "next/link";
 
+//componentes
+import Tech from "./components/Tech";
+import CardTrabalho from "./components/CardTrabalho";
+
 interface Project {
   link: string,
+  description: string,
+  techs: string[]
+}
+
+interface Work {
+  position: string,
+  startDate: Date,
+  endDate: Date,
   description: string,
   techs: string[]
 }
@@ -45,6 +59,16 @@ export default function Home() {
       link: "https://github.com/alexiamelhado18/frontADS2022TCC-casaleite",
       description: "TCC - e-commerce de materiais de construção civil",
       techs: ["Vue", "JavaScript", "Pyhton", "Flask", "MySQL"]
+    }
+  ]);
+
+  const [works, setWorks] = useState<Work[]>([
+    {
+      position: "Instrutora de Formação Profissional II",
+      startDate: new Date(),
+      endDate: new Date(),
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam.",
+      techs: ["React", "C#", "TS", "JS", "SQL Server", "MySQL", "Java", "Kotlin"]
     }
   ]);
 
@@ -148,32 +172,13 @@ export default function Home() {
           </header>
           {
             currentWork === "senai" && (
-              <>
-                <div>
-                  <h2>Instrutora de Formação Profissional II</h2>
-
-                  <span>dez/2022 — Atual</span>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam.</p>
-
-                <div>
-                  <div>
-                    <span>React</span>
-                  </div>
-                  <div>
-                    <span>React</span>
-                  </div>
-                  <div>
-                    <span>React</span>
-                  </div>
-                  <div>
-                    <span>React</span>
-                  </div>
-                  <div>
-                    <span>React</span>
-                  </div>
-                </div>
-              </>
+              <CardTrabalho
+                description={works[0].description}
+                endDate={works[0].endDate}
+                position={works[0].position}
+                startDate={works[0].startDate}
+                techs={works[0].techs}
+              />
             )
           }
 
@@ -208,7 +213,7 @@ export default function Home() {
                   <div>
                     <h3>Nome do projeto</h3>
                     <Link href={project.link} target="_blank" title="Ir para o repositório">
-                      <img src="/assets/images/png/setatopodireita.png" alt=""/>
+                      <img src="/assets/images/png/setatopodireita.png" alt="" />
                     </Link>
                   </div>
                   <p>{project.description}</p>
@@ -217,9 +222,10 @@ export default function Home() {
                       project.techs.map((tech: string, indexTech: number) => {
                         return (
                           indexTech <= 2 && (
-                            <div key={indexTech}>
-                              <span title={tech}>{tech}</span>
-                            </div>
+                            <Tech
+                              key={indexTech}
+                              name={tech}
+                            />
                           ))
                       })
                     }
