@@ -125,7 +125,7 @@ div.div__quadrado {
 
 #section__experiencia {
     /* background-color: aqua; */
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -320,7 +320,7 @@ div.div__quadrado {
     gap: 41px;
     max-width: 500px;
     width: 100%;
-    height: 300px;
+    min-height: 250px;
     border: 1px solid var(--cor1);
     border-radius: 50px;
     padding: 20px;
@@ -344,7 +344,18 @@ div.div__quadrado {
     font-size: 18px;
 }
 
-#section__projetos>div:nth-child(2)>div>div>div {
+#section__projetos>div:nth-child(2)>div>div>div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#section__projetos>div:nth-child(2)>div>div>div:nth-child(1)>a>img:hover {
+    scale: 1.2;
+}
+
+#section__projetos>div:nth-child(2)>div>div>div:nth-child(3) {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -394,7 +405,6 @@ div.div__quadrado {
     justify-content: center;
     gap: 41px;
     width: 100%;
-    margin-top: 57px;
 }
 
 @media only screen and (max-width: 350px) {
