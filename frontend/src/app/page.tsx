@@ -69,7 +69,21 @@ export default function Home() {
       endDate: new Date(),
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam.",
       techs: ["React", "C#", "TS", "JS", "SQL Server", "MySQL", "Java", "Kotlin"]
-    }
+    },
+    {
+      position: "Estágiaria de Desenvolvimento Web",
+      startDate: new Date(),
+      endDate: new Date(),
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam.",
+      techs: ["HTML", "CSS", "JS", "RD Station", "Bootstrap", "FileZilla"]
+    },
+    {
+      position: "Desenvolvedora Frontend Junior",
+      startDate: new Date(),
+      endDate: new Date(),
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam.",
+      techs: ["HTML", "CSS", "JS", "Vue", "Vuex", "SQL Server", "C#", "Bootstrap", "Jquery"]
+    },
   ]);
 
   function animateForClickedWork(current: string) {
@@ -178,6 +192,28 @@ export default function Home() {
                 position={works[0].position}
                 startDate={works[0].startDate}
                 techs={works[0].techs}
+              />
+            )
+          }
+          {
+            currentWork === "cliqx" && (
+              <CardTrabalho
+                description={works[2].description}
+                endDate={works[2].endDate}
+                position={works[2].position}
+                startDate={works[2].startDate}
+                techs={works[2].techs}
+              />
+            )
+          }
+          {
+            currentWork === "logos" && (
+              <CardTrabalho
+                description={works[1].description}
+                endDate={works[1].endDate}
+                position={works[1].position}
+                startDate={works[1].startDate}
+                techs={works[1].techs}
               />
             )
           }
