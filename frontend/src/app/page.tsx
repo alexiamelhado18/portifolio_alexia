@@ -203,16 +203,21 @@ export default function Home() {
         <div>
           <div>
             {
-              projects.map((project: Project, index: Number) => {
-                return <div key={index.toString()}>
-                  <h3>Nome do projeto</h3>
+              projects.map((project: Project, indexProject: Number) => {
+                return <div key={indexProject.toString()}>
+                  <div>
+                    <h3>Nome do projeto</h3>
+                    <Link href={project.link} target="_blank" title="Ir para o repositório">
+                      <img src="/assets/images/png/setatopodireita.png" alt=""/>
+                    </Link>
+                  </div>
                   <p>{project.description}</p>
                   <div>
                     {
-                      project.techs.map((tech: string) => {
+                      project.techs.map((tech: string, indexTech: number) => {
                         return (
-                          project.techs.length <= 3 && (
-                            <div>
+                          indexTech <= 2 && (
+                            <div key={indexTech}>
                               <span title={tech}>{tech}</span>
                             </div>
                           ))
