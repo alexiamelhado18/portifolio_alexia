@@ -1,0 +1,15 @@
+.tech {
+    width: 100px;
+    height: 34px;
+    background-color: var(--cor1);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech>span {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--cor2);
+}
