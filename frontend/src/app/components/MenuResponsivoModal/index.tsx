@@ -22,21 +22,21 @@ export function MenuResponsivoModal({
             </header>
             <nav>
                 <ul>
-                    <li>
+                    <li onClick={fecharMenuResponsivo}>
                         <div className="div__seta"></div>
-                        <Link href={"#"}>inicial</Link>
+                        <Link href={"/#div__banner"}>inicial</Link>
                     </li>
-                    <li>
-                        <Link href={"#"}>sobre mim</Link>
+                    <li onClick={fecharMenuResponsivo}>
+                        <Link href={"/#section__sobremim"}>sobre mim</Link>
                     </li>
-                    <li>
-                        <Link href={"#"}>experiência</Link>
+                    <li onClick={fecharMenuResponsivo}>
+                        <Link href={"/#section__experiencia"}>experiência</Link>
                     </li>
-                    <li>
-                        <Link href={"#"}>projetos</Link>
+                    <li onClick={fecharMenuResponsivo}>
+                        <Link href={"/#section__projetos"}>projetos</Link>
                     </li>
-                    <li>
-                        <Link href={"#"}>contato</Link>
+                    <li onClick={fecharMenuResponsivo}>
+                        <Link href={"/#section__contato"}>contato</Link>
                     </li>
                 </ul>
             </nav>
