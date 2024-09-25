@@ -1,7 +1,7 @@
 'use client';
 
 //hooks
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 //estilização
 import "./style.css";
@@ -120,6 +120,27 @@ export default function Home() {
     }
   }
 
+  function scrollReveal() {
+    const intersectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        } else {
+          entry.target.classList.remove("show");
+
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll(".hidden");
+
+    hiddenElements.forEach((element) => intersectionObserver.observe(element));
+  }
+
+  useLayoutEffect(() => {
+    scrollReveal();
+  }, [])
+
   return (
     <>
       <section id="section__sobremim">
@@ -130,7 +151,7 @@ export default function Home() {
 
         </div>
         <div>
-          <div className="div__foto">
+          <div className="div__foto hidden">
             <div>
               <img src="/assets/images/svg/Arredondado.svg" alt="Foto com dois elementos redondos com cores laranjas claro e escuro" />
               <img src="/assets/images/png/alexia.png" alt="Foto de uma mulher branca de cabelos cacheados da cor marrom escuro, com oculos de grau e sorrindo" />
@@ -152,7 +173,7 @@ export default function Home() {
             </div>
 
           </div>
-          <div className="div__texto">
+          <div className="div__texto hidden">
             <span>Eu sou <span>Aléxia,</span></span>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam.</p>
           </div>
@@ -162,10 +183,9 @@ export default function Home() {
         <div>
           <h2>Experiência</h2>
           <div className="div__quadrado"></div>
-
         </div>
 
-        <div>
+        <div className="hidden">
           <header>
             <div>
               <button type="button" onClick={() => animateForClickedWork("logos")}>
@@ -245,7 +265,7 @@ export default function Home() {
           <div>
             {
               projects.map((project: Project, indexProject: Number) => {
-                return <div key={indexProject.toString()}>
+                return <div key={indexProject.toString()} className="hidden">
                   <div>
                     <h3>Nome do projeto</h3>
                     <Link href={project.link} target="_blank" title="Ir para o repositório">
