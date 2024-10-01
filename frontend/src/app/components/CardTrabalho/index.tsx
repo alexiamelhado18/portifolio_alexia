@@ -4,7 +4,7 @@ import "./style.css";
 interface CardTrabalho {
     position: string,
     startDate: Date,
-    endDate: Date,
+    endDate: Date | string,
     description: string,
     techs: string[]
 }
