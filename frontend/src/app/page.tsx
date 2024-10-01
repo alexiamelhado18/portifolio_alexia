@@ -12,6 +12,7 @@ import Tech from "./components/Tech";
 import CardTrabalho from "./components/CardTrabalho";
 
 interface Project {
+  name: string,
   link: string,
   description: string,
   techs: string[]
@@ -20,7 +21,7 @@ interface Project {
 interface Work {
   position: string,
   startDate: Date,
-  endDate: Date,
+  endDate: Date | string,
   description: string,
   techs: string[]
 }
@@ -31,31 +32,37 @@ export default function Home() {
 
   const [projects, setProjects] = useState<Project[]>([
     {
+      name: "Planejador de viagem",
       link: "https://github.com/alexiamelhado18/nlw-journey-react",
       description: "Projeto desenvolvido na semana do NLW Journey",
       techs: ["React", "Tailwind", "TypeScript"]
     },
     {
+      name: "To Do List",
       link: "https://github.com/alexiamelhado18/project-to-do-list",
       description: "Projeto referente a uma lista de tarefas",
       techs: ["React", "styled-components", "TypeScript"]
     },
     {
+      name: "Blog",
       link: "https://github.com/alexiamelhado18/desafios-codelandia/tree/main/desafio-01",
       description: "Projeto referente ao desafio 01 da comunidade codelandia",
       techs: ["Vue", "JavaScript"]
     },
     {
+      name: "JordanShoes",
       link: "https://github.com/alexiamelhado18/desafios-codelandia/tree/main/desafio-02",
       description: "Projeto referente ao desafio 02 da comunidade codelandia",
       techs: ["Vue", "JavaScript"]
     },
     {
+      name: "TechBlog",
       link: "https://github.com/alexiamelhado18/desafios-codelandia/tree/main/desafio-03",
       description: "Projeto referente ao desafio 03 da comunidade codelandia",
       techs: ["Vue", "JavaScript"]
     },
     {
+      name: "E-lance",
       link: "https://github.com/alexiamelhado18/frontADS2022TCC-casaleite",
       description: "TCC - e-commerce de materiais de construção civil",
       techs: ["Vue", "JavaScript", "Pyhton", "Flask", "MySQL"]
@@ -66,22 +73,22 @@ export default function Home() {
     {
       position: "Instrutora de Formação Profissional II",
       startDate: new Date(),
-      endDate: new Date(),
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam.",
+      endDate: "Atual",
+      description: "Atualmente, sou instrutora na unidade 1.34 da escola SENAI de Informática. Minhas responsabilidades incluem ministrar aulas teóricas e práticas, desenvolver planos de aula, orientar projetos, avaliar o desempenho dos alunos e oferecer suporte. Além disso, mantenho-me atualizada com as tecnologias e tendências do setor, colaboro com a equipe pedagógica e preparo os alunos para o mercado de trabalho, promovendo tanto habilidades técnicas quanto comportamentais.",
       techs: ["React", "C#", "TS", "JS", "SQL Server", "MySQL", "Java", "Kotlin"]
     },
     {
       position: "Estágiaria de Desenvolvimento Web",
-      startDate: new Date(),
-      endDate: new Date(),
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam.",
+      startDate: new Date(2020, 6),
+      endDate: new Date(2020, 10),
+      description: "Durante o estágio de cinco meses, atuei na criação de novas telas, incluindo sua estruturação, estilização, responsividade e funcionalidade. Também realizei a manutenção de telas já existentes, fiz deploys manuais utilizando o FileZilla e integrei componentes do RD Station na aplicação.",
       techs: ["HTML", "CSS", "JS", "RD Station", "Bootstrap", "FileZilla"]
     },
     {
       position: "Desenvolvedora Frontend Junior",
-      startDate: new Date(),
-      endDate: new Date(),
-      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam.",
+      startDate: new Date(2020, 11),
+      endDate: new Date(2022, 11),
+      description: "Na Cliqx, comecei como Desenvolvedora Full Stack e, após um ano, fui promovida a Desenvolvedora Front-end Júnior. Durante esse período, participei de três projetos importantes para a Pernambucanas. Em um desses projetos, atuei com maior destaque no frontend, utilizando Vue e Vuex, seguindo os padrões do mercado. Essa experiência foi fundamental para o meu desenvolvimento.",
       techs: ["HTML", "CSS", "JS", "Vue", "Vuex", "SQL Server", "C#", "Bootstrap", "Jquery"]
     },
   ]);
@@ -175,7 +182,7 @@ export default function Home() {
           </div>
           <div className="div__texto hidden">
             <span>Eu sou <span>Aléxia,</span></span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ratione rem voluptatibus id ipsa natus adipisci obcaecati sit, sint excepturi? Dolorum temporibus unde aliquam repellendus aperiam quae aliquid? Totam, veniam.</p>
+            <p>Atuo na área de T.I há cerca de quatro anos. Sou formada tecnicamente em Desenvolvimento de Sistemas e também graduada na mesma área. Tenho uma paixão por criar interfaces de usuário com foco em estrutura, estilização, responsividade e funcionalidade. Atualmente, estou me dedicando aos estudos de animação e aprimorando meu inglês.</p>
           </div>
         </div>
       </section>
@@ -267,7 +274,7 @@ export default function Home() {
               projects.map((project: Project, indexProject: Number) => {
                 return <div key={indexProject.toString()} className="hidden">
                   <div>
-                    <h3>Nome do projeto</h3>
+                    <h3>{project.name}</h3>
                     <Link href={project.link} target="_blank" title="Ir para o repositório">
                       <img src="/assets/images/png/setatopodireita.png" alt="" />
                     </Link>
