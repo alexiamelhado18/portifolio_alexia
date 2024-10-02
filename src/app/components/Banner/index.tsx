@@ -3,13 +3,18 @@
 //estilização
 import "./style.css";
 
-import Link from "next/link";
 
 //hooks
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useState } from "react";
 
 //componentes
 import { MenuResponsivoModal } from "../MenuResponsivoModal";
+import Link from "next/link";
+import Image from "next/image";
+
+//imagens
+import imgLogo from "../../../../public/assets/images/svg/Logo.svg";
+import imgAbrir from "../../../../public/assets/images/svg/Logo.svg";
 
 export function Banner() {
 
@@ -31,10 +36,16 @@ export function Banner() {
         <>
             <div id="div__banner">
                 <header>
-                    <img src="/assets/images/svg/Logo.svg" alt="Logo que representa um tag html, formada pela letra A, / e V, deitados na horizontal." />
+                    <Image
+                        src={imgLogo}
+                        alt="Logo que representa um tag html, formada pela letra A, / e V, deitados na horizontal."
+                    />
 
                     <button type="button" onClick={abrirMenuResponsivo}>
-                        <img src="/assets/images/png/abrir.png" alt="ícone que representa um menu" id="img__abrir" />
+                        <img
+                            src={imgAbrir}
+                            alt="ícone que representa um menu" id="img__abrir"
+                        />
                     </button>
                 </header>
                 <div>
