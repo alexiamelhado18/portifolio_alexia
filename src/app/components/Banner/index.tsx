@@ -14,7 +14,7 @@ import Image from "next/image";
 
 //imagens
 import imgLogo from "../../../../public/assets/images/svg/Logo.svg";
-import imgAbrir from "../../../../public/assets/images/svg/Logo.svg";
+import imgAbrir from "../../../../public/assets/images/svg/abrir.png";
 
 export function Banner() {
 
