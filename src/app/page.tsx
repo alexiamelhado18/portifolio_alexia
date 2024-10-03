@@ -1,15 +1,38 @@
 'use client';
 
 //hooks
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 
 //estilização
 import "./style.css";
-import Link from "next/link";
 
 //componentes
 import Tech from "./components/Tech";
 import CardTrabalho from "./components/CardTrabalho";
+import Link from "next/link";
+import Image from "next/image";
+
+//imagens
+import imgArredondado from "../../public/assets/images/svg/Arredondado.svg";
+import imgAlexia from "../../public/assets/images/png/alexia.png";
+import imgSetaEsquerdaComVolta from "../../public/assets/images/svg/Seta esquerda com volta.svg";
+import imgSetaDireitaComVolta from "../../public/assets/images/svg/Seta direita com volta.svg";
+import imgSetaDireita from "../../public/assets/images/svg/Seta direita.svg";
+import imgJs from "../../public/assets/images/png/js.png";
+import imgCss from "../../public/assets/images/png/css.png";
+import imgSqlServer from "../../public/assets/images/png/sqlserver.png";
+import imgHtml from "../../public/assets/images/png/html.png";
+import imgLess from "../../public/assets/images/png/less.png";
+import imgJquery from "../../public/assets/images/png/jquery.png";
+import imgReact from "../../public/assets/images/png/react.png";
+import imgTailwind from "../../public/assets/images/png/tailwind.png";
+import imgBootstrap from "../../public/assets/images/png/bootstrap.png";
+import imgVue from "../../public/assets/images/png/vue.png";
+import imgMySql from "../../public/assets/images/png/mysql.png";
+import imgKotlin from "../../public/assets/images/png/kotlin.png";
+import imgGithub from "../../public/assets/images/png/github.png";
+import imgLinkedin from "../../public/assets/images/png/linkedin.png";
+import imgEmail from "../../public/assets/images/png/email.png";
 
 interface Project {
   name: string,
@@ -160,22 +183,37 @@ export default function Home() {
         <div>
           <div className="div__foto hidden">
             <div>
-              <img src="/assets/images/svg/Arredondado.svg" alt="Foto com dois elementos redondos com cores laranjas claro e escuro" />
-              <img src="/assets/images/png/alexia.png" alt="Foto de uma mulher branca de cabelos cacheados da cor marrom escuro, com oculos de grau e sorrindo" />
+              <Image
+                src={imgArredondado}
+                alt="Foto com dois elementos redondos com cores laranjas claro e escuro"
+              />
+              <Image
+                src={imgAlexia}
+                alt="Foto de uma mulher branca de cabelos cacheados da cor marrom escuro, com oculos de grau e sorrindo"
+              />
             </div>
 
             <div>
-              <img src="/assets/images/svg/Seta esquerda com volta.svg" alt="" />
+              <Image
+                src={imgSetaEsquerdaComVolta}
+                alt=""
+              />
               <p>Comunicativa</p>
             </div>
 
             <div>
-              <img src="/assets/images/svg/Seta direita.svg" alt="" />
+              <Image
+                src={imgSetaDireita}
+                alt=""
+              />
               <p>Técnica em Desenvolvimento de sistemas</p>
             </div>
 
             <div>
-              <img src="/assets/images/svg/Seta direita com volta.svg" alt="" />
+              <Image
+                src={imgSetaDireitaComVolta}
+                alt=""
+              />
               <p>Graduada em ADS</p>
             </div>
 
@@ -249,18 +287,66 @@ export default function Home() {
       </section>
       <section id="section__tecnologias">
         <div>
-          <img src="/assets/images/png/js.png" alt="" title="js" />
-          <img src="/assets/images/png/css.png" alt="" title="css" />
-          <img src="/assets/images/png/sqlserver.png" alt="" title="sqlserver" />
-          <img src="/assets/images/png/html.png" alt="" title="html" />
-          <img src="/assets/images/png/less.png" alt="" title="less" />
-          <img src="/assets/images/png/jquery.png" alt="" title="jquery" />
-          <img src="/assets/images/png/react.png" alt="" title="react" />
-          <img src="/assets/images/png/tailwind.png" alt="" title="tailwind" />
-          <img src="/assets/images/png/bootstrap.png" alt="" title="bootstrap" />
-          <img src="/assets/images/png/vue.png" alt="" title="vue" />
-          <img src="/assets/images/png/mysql.png" alt="" title="mysql" />
-          <img src="/assets/images/png/kotlin.png" alt="" title="kotlin" />
+          <Image
+            src={imgJs}
+            alt=""
+            title="js"
+          />
+          <Image
+            src={imgCss}
+            alt=""
+            title="css"
+          />
+          <Image
+            src={imgSqlServer}
+            alt=""
+            title="sqlserver"
+          />
+          <Image
+            src={imgHtml}
+            alt=""
+            title="html"
+          />
+          <Image
+            src={imgLess}
+            alt=""
+            title="less"
+          />
+          <Image
+            src={imgJquery}
+            alt=""
+            title="jquery"
+          />
+          <Image
+            src={imgReact}
+            alt=""
+            title="react"
+          />
+          <Image
+            src={imgTailwind}
+            alt=""
+            title="tailwind"
+          />
+          <Image
+            src={imgBootstrap}
+            alt=""
+            title="bootstrap"
+          />
+          <Image
+            src={imgVue}
+            alt=""
+            title="vue"
+          />
+          <Image
+            src={imgMySql}
+            alt=""
+            title="mysql"
+          />
+          <Image
+            src={imgKotlin}
+            alt=""
+            title="kotlin"
+          />
         </div>
       </section>
       <section id="section__projetos">
@@ -311,14 +397,32 @@ export default function Home() {
         </div>
         <p>Obrigada por ter visitado meu portfólio. Caso queira entrar em contato comigo, acesse por esses canais abaixo.</p>
         <div>
-          <Link href={"https://github.com/alexiamelhado18"} target="_blank">
-            <img src="/assets/images/png/github.png" alt="Ícone do github" />
+          <Link
+            href={"https://github.com/alexiamelhado18"}
+            target="_blank"
+          >
+            <Image
+              src={imgGithub}
+              alt="Ícone do github"
+            />
           </Link>
-          <Link href={"https://www.linkedin.com/in/al%C3%A9xia-vit%C3%B3ria-b0ab08169/"} target="_blank">
-            <img src="/assets/images/png/linkedin.png" alt="Ícone do linkedin" />
+          <Link
+            href={"https://www.linkedin.com/in/al%C3%A9xia-vit%C3%B3ria-b0ab08169/"}
+            target="_blank"
+          >
+            <Image
+              src={imgLinkedin}
+              alt="Ícone do linkedin"
+            />
           </Link>
-          <Link href={"mailto:alexiavitoria.dev@gmail.com"} target="_blank">
-            <img src="/assets/images/png/email.png" alt="Ícone de e-mail" />
+          <Link
+            href={"mailto:alexiavitoria.dev@gmail.com"}
+            target="_blank"
+          >
+            <Image
+              src={imgEmail}
+              alt="Ícone de e-mail"
+            />
           </Link>
         </div>
       </section>

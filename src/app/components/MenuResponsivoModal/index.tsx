@@ -3,6 +3,13 @@ import Link from "next/link";
 //estilização
 import "./style.css";
 
+//componentes
+import Image from "next/image";
+
+//imagens
+import imgLogo from "../../../../public/assets/images/svg/Logo.svg";
+import imgFechar from "../../../../public/assets/images/png/fechar.png";
+
 
 interface MenuResponsivoModal {
     fecharMenuResponsivo: () => void
@@ -14,10 +21,17 @@ export function MenuResponsivoModal({
     return (
         <div className="div__menuresponsivo">
             <header>
-                <img src="/assets/images/svg/Logo.svg" alt="Logo que representa um tag html, formada pela letra A, / e V, deitados na horizontal." />
+                <Image
+                    src={imgLogo}
+                    alt="Logo que representa um tag html, formada pela letra A, / e V, deitados na horizontal."
+                />
 
                 <button type="button" onClick={fecharMenuResponsivo}>
-                    <img src="/assets/images/png/fechar.png" alt="ícone que representa um x" id="img__fechar" />
+                    <Image
+                        src={imgFechar}
+                        alt="ícone que representa um x"
+                        id="img__fechar"
+                    />
                 </button>
             </header>
             <nav>

@@ -42,7 +42,7 @@ export function Banner() {
                     />
 
                     <button type="button" onClick={abrirMenuResponsivo}>
-                        <img
+                        <Image
                             src={imgAbrir}
                             alt="ícone que representa um menu" id="img__abrir"
                         />
