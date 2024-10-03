@@ -359,9 +359,9 @@ div.div__quadrado {
     width: 100%;
 }
 
-#section__contato>div:nth-child(3)>a>img {
+/* #section__contato>div:nth-child(3)>a>img {
     height: 50px;
-}
+} */
 
 #section__contato>div:nth-child(3)>a>img:hover {
     scale: 0.9;
