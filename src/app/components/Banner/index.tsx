@@ -18,18 +18,18 @@ import imgAbrir from "../../../../public/assets/images/png/abrir.png";
 
 export function Banner() {
 
-    const [abrirModalMenuResponsivo, setAbrirModalMenuResponsivo] = useState<boolean>(false);
+    const [openModalMenuResponsivo, setOpenModalMenuResponsivo] = useState<boolean>(false);
 
-    function abrirMenuResponsivo() {
+    function openMenuResponsivo() {
         let elementBody = document.getElementsByTagName("body")[0];
         elementBody.style.overflow = "hidden";
-        setAbrirModalMenuResponsivo(true);
+        setOpenModalMenuResponsivo(true);
     }
 
-    function fecharMenuResponsivo() {
+    function closeMenuResponsivo() {
         let elementBody = document.getElementsByTagName("body")[0];
         elementBody.style.overflow = "auto";
-        setAbrirModalMenuResponsivo(false);
+        setOpenModalMenuResponsivo(false);
     }
 
     return (
@@ -41,7 +41,7 @@ export function Banner() {
                         alt="Logo que representa um tag html, formada pela letra A, / e V, deitados na horizontal."
                     />
 
-                    <button type="button" onClick={abrirMenuResponsivo} style={{cursor: "pointer"}}>
+                    <button type="button" onClick={openMenuResponsivo} style={{cursor: "pointer"}}>
                         <Image
                             src={imgAbrir}
                             alt="ícone que representa um menu" id="img__abrir"
@@ -78,9 +78,9 @@ export function Banner() {
             </div >
 
             {
-                abrirModalMenuResponsivo && (
+                openModalMenuResponsivo && (
                     <MenuResponsivoModal
-                        fecharMenuResponsivo={fecharMenuResponsivo}
+                    closeMenuResponsivo={closeMenuResponsivo}
                     />
                 )
             }

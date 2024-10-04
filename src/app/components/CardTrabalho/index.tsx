@@ -1,7 +1,7 @@
 import Tech from "../CardTecnologia";
 import "./style.css";
 
-interface CardTrabalho {
+interface Work {
     position: string,
     startDate: Date,
     endDate: Date | string,
@@ -15,7 +15,7 @@ export default function CardTrabalho({
     position,
     startDate,
     techs
-}: CardTrabalho) {
+}: Work) {
     return (
         <>
             <div>

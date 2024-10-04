@@ -12,11 +12,11 @@ import imgFechar from "../../../../public/assets/images/png/fechar.png";
 
 
 interface MenuResponsivoModal {
-    fecharMenuResponsivo: () => void
+    closeMenuResponsivo: () => void
 };
 
 export function MenuResponsivoModal({
-    fecharMenuResponsivo
+    closeMenuResponsivo
 }: MenuResponsivoModal) {
     return (
         <div className="div__menuresponsivo">
@@ -26,7 +26,7 @@ export function MenuResponsivoModal({
                     alt="Logo que representa um tag html, formada pela letra A, / e V, deitados na horizontal."
                 />
 
-                <button type="button" onClick={fecharMenuResponsivo}>
+                <button type="button" onClick={closeMenuResponsivo}>
                     <Image
                         src={imgFechar}
                         alt="ícone que representa um x"
@@ -36,20 +36,20 @@ export function MenuResponsivoModal({
             </header>
             <nav>
                 <ul>
-                    <li onClick={fecharMenuResponsivo}>
+                    <li onClick={closeMenuResponsivo}>
                         <div className="div__seta"></div>
                         <Link href="#div__banner">inicial</Link>
                     </li>
-                    <li onClick={fecharMenuResponsivo}>
+                    <li onClick={closeMenuResponsivo}>
                         <Link href="#section__sobremim">sobre mim</Link>
                     </li>
-                    <li onClick={fecharMenuResponsivo}>
+                    <li onClick={closeMenuResponsivo}>
                         <Link href="#section__experiencia">experiência</Link>
                     </li>
-                    <li onClick={fecharMenuResponsivo}>
+                    <li onClick={closeMenuResponsivo}>
                         <Link href="#section__projetos">projetos</Link>
                     </li>
-                    <li onClick={fecharMenuResponsivo}>
+                    <li onClick={closeMenuResponsivo}>
                         <Link href="#section__contato">contato</Link>
                     </li>
                 </ul>
