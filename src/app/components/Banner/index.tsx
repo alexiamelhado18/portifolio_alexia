@@ -41,7 +41,7 @@ export function Banner() {
                         alt="Logo que representa um tag html, formada pela letra A, / e V, deitados na horizontal."
                     />
 
-                    <button type="button" onClick={abrirMenuResponsivo}>
+                    <button type="button" onClick={abrirMenuResponsivo} style={{cursor: "pointer"}}>
                         <Image
                             src={imgAbrir}
                             alt="ícone que representa um menu" id="img__abrir"
