@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body>
-        <h1 style={{ position: "absolute", opacity: 0 }}>Página inicial - portfólio de Aléxia Vitória</h1>
+        <h1 style={{ position: "absolute", opacity: 0, zIndex: -1 }}>Página inicial - portfólio de Aléxia Vitória</h1>
         <Banner />
         <main>
           {children}
