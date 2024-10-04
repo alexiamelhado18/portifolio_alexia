@@ -1,4 +1,4 @@
-import Tech from "../Tech";
+import Tech from "../CardTecnologia";
 import "./style.css";
 
 interface CardTrabalho {

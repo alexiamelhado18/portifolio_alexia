@@ -7,7 +7,7 @@ import { useLayoutEffect, useState } from "react";
 import "./style.css";
 
 //componentes
-import Tech from "./components/Tech";
+import Tech from "./components/CardTecnologia";
 import CardTrabalho from "./components/CardTrabalho";
 import Link from "next/link";
 import Image from "next/image";
