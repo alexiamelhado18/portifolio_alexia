@@ -53,19 +53,19 @@ export function Banner() {
                         <ul>
                             <li>
                                 <div className="div__seta"></div>
-                                <Link href={"/#div__banner"}>inicial</Link>
+                                <Link href={"#div__banner"}>inicial</Link>
                             </li>
                             <li>
-                                <Link href={"/#section__sobremim"}>sobre mim</Link>
+                                <Link href={"#section__sobremim"}>sobre mim</Link>
                             </li>
                             <li>
-                                <Link href={"/#section__experiencia"}>experiência</Link>
+                                <Link href={"#section__experiencia"}>experiência</Link>
                             </li>
                             <li>
-                                <Link href={"/#section__projetos"}>projetos</Link>
+                                <Link href={"#section__projetos"}>projetos</Link>
                             </li>
                             <li>
-                                <Link href={"/#section__contato"}>contato</Link>
+                                <Link href={"#section__contato"}>contato</Link>
                             </li>
                         </ul>
                     </nav>
