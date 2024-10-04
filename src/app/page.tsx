@@ -402,7 +402,7 @@ export default function Home() {
         <p>Obrigada por ter visitado meu portfólio. Caso queira entrar em contato comigo, acesse por esses canais abaixo.</p>
         <div>
           <Link
-            href={"https://github.com/alexiamelhado18"}
+            href="https://github.com/alexiamelhado18"
             target="_blank"
           >
             <Image
@@ -411,7 +411,7 @@ export default function Home() {
             />
           </Link>
           <Link
-            href={"https://www.linkedin.com/in/al%C3%A9xia-vit%C3%B3ria-b0ab08169/"}
+            href="https://www.linkedin.com/in/al%C3%A9xia-vit%C3%B3ria-b0ab08169/"
             target="_blank"
           >
             <Image
@@ -420,7 +420,7 @@ export default function Home() {
             />
           </Link>
           <Link
-            href={"mailto:alexiavitoria.dev@gmail.com"}
+            href="mailto:alexiavitoria.dev@gmail.com"
             target="_blank"
           >
             <Image
