@@ -19,7 +19,7 @@ export default function CardTrabalho({
     return (
         <>
             <div>
-                <h2>{position}</h2>
+                <h4>{position}</h4>
 
                 <span>{startDate.getMonth().toString() + "/" + startDate.getFullYear().toString()} — {typeof endDate === "string" ? endDate : endDate.getMonth().toString() + "/" + endDate.getFullYear().toString()}</span>
             </div>
