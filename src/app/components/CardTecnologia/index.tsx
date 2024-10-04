@@ -4,11 +4,11 @@ interface Tech {
     name: string
 }
 
-export default function Tech({
+export default function CardTecnologia({
     name
 }: Tech) {
     return (
-        <div className="tech">
+        <div className="tecnologia">
             <span>{name}</span>
         </div>
     );
