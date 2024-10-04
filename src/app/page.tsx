@@ -33,6 +33,7 @@ import imgKotlin from "../../public/assets/images/png/kotlin.png";
 import imgGithub from "../../public/assets/images/png/github.png";
 import imgLinkedin from "../../public/assets/images/png/linkedin.png";
 import imgEmail from "../../public/assets/images/png/email.png";
+import imgSetaTopoDireita from "../../public/assets/images/png/setatopodireita.png";
 
 interface Project {
   name: string,
@@ -362,7 +363,10 @@ export default function Home() {
                   <div>
                     <h3>{project.name}</h3>
                     <Link href={project.link} target="_blank" title="Ir para o repositório">
-                      <img src="/assets/images/png/setatopodireita.png" alt="" />
+                      <Image
+                        src={imgSetaTopoDireita}
+                        alt=""
+                      />
                     </Link>
                   </div>
                   <p>{project.description}</p>
