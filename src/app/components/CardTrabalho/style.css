@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-between;
 }
-#section__experiencia>div:nth-child(2)>div:nth-child(2)>h2 {
+#section__experiencia>div:nth-child(2)>div:nth-child(2)>h4 {
     background-color: var(--cor1);
     padding: 0 5px;
     font-size: 18px;
