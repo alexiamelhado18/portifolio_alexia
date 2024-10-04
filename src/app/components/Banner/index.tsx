@@ -53,7 +53,7 @@ export function Banner() {
                         <ul>
                             <li>
                                 <div className="div__seta"></div>
-                                <Link href={"#div__banner"}>inicial</Link>
+                                <Link href="#div__banner">inicial</Link>
                             </li>
                             <li>
                                 <Link href={"#section__sobremim"}>sobre mim</Link>
