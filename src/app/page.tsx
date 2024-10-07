@@ -18,18 +18,18 @@ import imgAlexia from "../../public/assets/images/png/alexia.png";
 import imgSetaEsquerdaComVolta from "../../public/assets/images/svg/Seta esquerda com volta.svg";
 import imgSetaDireitaComVolta from "../../public/assets/images/svg/Seta direita com volta.svg";
 import imgSetaDireita from "../../public/assets/images/svg/Seta direita.svg";
-import imgJs from "../../public/assets/images/png/js.png";
-import imgCss from "../../public/assets/images/png/css.png";
-import imgSqlServer from "../../public/assets/images/png/sqlserver.png";
-import imgHtml from "../../public/assets/images/png/html.png";
-import imgLess from "../../public/assets/images/png/less.png";
-import imgJquery from "../../public/assets/images/png/jquery.png";
-import imgReact from "../../public/assets/images/png/react.png";
-import imgTailwind from "../../public/assets/images/png/tailwind.png";
-import imgBootstrap from "../../public/assets/images/png/bootstrap.png";
-import imgVue from "../../public/assets/images/png/vue.png";
-import imgMySql from "../../public/assets/images/png/mysql.png";
-import imgKotlin from "../../public/assets/images/png/kotlin.png";
+import imgJs from "../../public/assets/images/svg/js.svg";
+import imgCss from "../../public/assets/images/svg/css.svg";
+import imgSqlServer from "../../public/assets/images/svg/sqlserver.svg";
+import imgHtml from "../../public/assets/images/svg/html.svg";
+import imgLess from "../../public/assets/images/svg/less.svg";
+import imgJquery from "../../public/assets/images/svg/jquery.svg";
+import imgReact from "../../public/assets/images/svg/react.svg";
+import imgTailwind from "../../public/assets/images/svg/tailwind.svg";
+import imgBootstrap from "../../public/assets/images/svg/bootstrap.svg";
+import imgVue from "../../public/assets/images/svg/vue.svg";
+import imgMySql from "../../public/assets/images/svg/mysql.svg";
+import imgKotlin from "../../public/assets/images/svg/kotlin.svg";
 import imgGithub from "../../public/assets/images/png/github.png";
 import imgLinkedin from "../../public/assets/images/png/linkedin.png";
 import imgEmail from "../../public/assets/images/png/email.png";
@@ -287,6 +287,68 @@ export default function Home() {
         </div>
       </section>
       <section id="section__tecnologias">
+        <div>
+          <Image
+            src={imgJs}
+            alt=""
+            title="js"
+          />
+          <Image
+            src={imgCss}
+            alt=""
+            title="css"
+          />
+          <Image
+            src={imgSqlServer}
+            alt=""
+            title="sqlserver"
+          />
+          <Image
+            src={imgHtml}
+            alt=""
+            title="html"
+          />
+          <Image
+            src={imgLess}
+            alt=""
+            title="less"
+          />
+          <Image
+            src={imgJquery}
+            alt=""
+            title="jquery"
+          />
+          <Image
+            src={imgReact}
+            alt=""
+            title="react"
+          />
+          <Image
+            src={imgTailwind}
+            alt=""
+            title="tailwind"
+          />
+          <Image
+            src={imgBootstrap}
+            alt=""
+            title="bootstrap"
+          />
+          <Image
+            src={imgVue}
+            alt=""
+            title="vue"
+          />
+          <Image
+            src={imgMySql}
+            alt=""
+            title="mysql"
+          />
+          <Image
+            src={imgKotlin}
+            alt=""
+            title="kotlin"
+          />
+        </div>
         <div>
           <Image
             src={imgJs}
