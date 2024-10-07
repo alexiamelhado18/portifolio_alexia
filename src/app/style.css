@@ -212,27 +212,27 @@ div.div__quadrado {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    white-space: nowrap;
 
 }
 
 #section__tecnologias>div {
-    display: flex;
-    align-items: center;
-    gap: 45px;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    /* animation: 20s linear infinite scroll; */
+    display: inline-block;
+    animation: scroll 10s linear infinite;
 }
 
-/* @keyframes scroll {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  } */
+#section__tecnologias>div>img {
+    margin: 0 45px;
+}
+
+@keyframes scroll {
+    from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 
 /* sessão projetos */
 #section__projetos {
