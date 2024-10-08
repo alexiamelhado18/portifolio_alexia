@@ -5,6 +5,11 @@ section>div:first-child {
     z-index: 1;
 }
 
+section>div:first-child>h2 {
+    color: var(--cor2);
+    font-size: 24px;
+}
+
 div.div__quadrado {
     position: absolute;
     right: 0.1px;
@@ -58,6 +63,7 @@ div.div__quadrado {
     left: -135px;
     bottom: 7px;
     font-weight: bold;
+    color: var(--cor2);
 }
 
 .div__foto>div:nth-child(3) {
@@ -110,7 +116,6 @@ div.div__quadrado {
 }
 
 .div__texto>span>span {
-    width: 100%;
     background-color: var(--cor1);
     padding: 0 5px;
 }
@@ -180,6 +185,11 @@ div.div__quadrado {
 #section__experiencia>div:nth-child(2)>header>div:first-child>button>h3 {
     font-size: 20px;
     font-weight: 500;
+}
+
+#section__experiencia>div:nth-child(2)>header>div:first-child>button,
+#section__experiencia>div:nth-child(2)>header>div:first-child>button>h3 {
+    color: var(--cor2);
 }
 
 .div__logos,
@@ -321,6 +331,11 @@ div.div__quadrado {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+}
+
+#section__projetos>div:nth-child(2)>div>div>div:nth-child(1)>h3{
+    font-size: 20px;
+    color: var(--cor2);
 }
 
 #section__projetos>div:nth-child(2)>div>div>div:nth-child(1)>a>img:hover {
