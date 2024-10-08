@@ -8,7 +8,7 @@ import Image from "next/image";
 
 //imagens
 import imgLogo from "../../../../public/assets/images/svg/Logo.svg";
-import imgFechar from "../../../../public/assets/images/png/fechar.png";
+import imgFechar from "../../../../public/assets/images/svg/fechar.svg";
 
 
 interface MenuResponsivoModal {
