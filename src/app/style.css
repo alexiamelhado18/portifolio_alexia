@@ -211,6 +211,7 @@ div.div__quadrado {
     overflow: hidden;
     white-space: nowrap;
     padding: 37px 0;
+    position: relative;
 }
 
 #section__tecnologias>div {
@@ -224,12 +225,34 @@ div.div__quadrado {
 
 @keyframes scroll {
     from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
 }
+
+#section__tecnologias:before,
+#section__tecnologias:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+#section__tecnologias:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--cor6));
+}
+
+#section__tecnologias:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--cor6));
+}
+
 
 /* sessão projetos */
 #section__projetos {
