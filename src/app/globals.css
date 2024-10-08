@@ -18,10 +18,6 @@
   --cor8: #FFF7F4;
 }
 
-h2 {
-  font-size: 24px;
-}
-
 main {
   display: flex;
   flex-direction: column;
