@@ -1,0 +1,76 @@
+/* backdrop */
+.backdrop {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    background-color: #00000030;
+}
+
+.modal {
+    position: fixed;
+    margin: auto;
+    inset: 0;
+    z-index: 3;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 57px;
+    padding: 20px;
+}
+
+.modal>header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.modal>header>button {
+    background-color: transparent;
+    border: 0;
+}
+
+.modal>div {
+    /* background-color: aqua; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.modal>div>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.div__pesquisa {
+    /* background-color: white; */
+    height: 41px;
+    padding: 5px;
+    border-radius: 50px;
+    border: 2px solid var(--cor1);
+}
+
+.div__pesquisa>input {
+    border: 0;
+    outline: none;
+    height: 100%;
+    background-color: transparent;
+    padding-left: 7px;
+}
+
+.div__pesquisa>button {
+    background-color: transparent;
+    border: 0;
+    height: 100%;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+}
