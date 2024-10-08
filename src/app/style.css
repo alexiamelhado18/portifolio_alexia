@@ -208,12 +208,9 @@ div.div__quadrado {
     background-color: var(--cor6);
     width: calc(100% + 280px);
     height: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
     white-space: nowrap;
-
+    padding: 37px 0;
 }
 
 #section__tecnologias>div {
