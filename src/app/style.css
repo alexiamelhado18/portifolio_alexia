@@ -281,6 +281,8 @@ div.div__quadrado {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 57px;
 }
 
 #section__projetos>div:nth-child(2)>div {
@@ -333,7 +335,7 @@ div.div__quadrado {
     width: 100%;
 }
 
-#section__projetos>div:nth-child(2)>div>div>div:nth-child(1)>h3{
+#section__projetos>div:nth-child(2)>div>div>div:nth-child(1)>h3 {
     font-size: 20px;
     color: var(--cor2);
 }
