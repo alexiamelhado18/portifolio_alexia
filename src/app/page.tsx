@@ -14,7 +14,7 @@ import Image from "next/image";
 
 //imagens
 import imgArredondado from "../../public/assets/images/svg/Arredondado.svg";
-import imgAlexia from "../../public/assets/images/png/alexia.png";
+import imgAlexia from "../../public/assets/images/svg/alexia.svg";
 import imgSetaEsquerdaComVolta from "../../public/assets/images/svg/Seta esquerda com volta.svg";
 import imgSetaDireitaComVolta from "../../public/assets/images/svg/Seta direita com volta.svg";
 import imgSetaDireita from "../../public/assets/images/svg/Seta direita.svg";
@@ -30,10 +30,10 @@ import imgBootstrap from "../../public/assets/images/svg/bootstrap.svg";
 import imgVue from "../../public/assets/images/svg/vue.svg";
 import imgMySql from "../../public/assets/images/svg/mysql.svg";
 import imgKotlin from "../../public/assets/images/svg/kotlin.svg";
-import imgGithub from "../../public/assets/images/png/github.png";
-import imgLinkedin from "../../public/assets/images/png/linkedin.png";
-import imgEmail from "../../public/assets/images/png/email.png";
-import imgSetaTopoDireita from "../../public/assets/images/png/setatopodireita.png";
+import imgGithub from "../../public/assets/images/svg/github.svg";
+import imgLinkedin from "../../public/assets/images/svg/linkedin.svg";
+import imgEmail from "../../public/assets/images/svg/email.svg";
+import imgSetaTopoDireita from "../../public/assets/images/svg/setatopodireita.svg";
 
 interface Project {
   name: string,
