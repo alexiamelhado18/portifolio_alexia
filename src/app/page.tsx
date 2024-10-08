@@ -11,6 +11,7 @@ import Tech from "./components/CardTecnologia";
 import CardTrabalho from "./components/CardTrabalho";
 import Link from "next/link";
 import Image from "next/image";
+import ProjetosModal from "./components/ProjetosModal";
 
 //imagens
 import imgArredondado from "../../public/assets/images/svg/Arredondado.svg";
@@ -116,6 +117,17 @@ export default function Home() {
       techs: ["HTML", "CSS", "JS", "Vue", "Vuex", "SQL Server", "C#", "Bootstrap", "Jquery"]
     },
   ]);
+
+  const [openProjects, setOpenProjects] = useState<boolean>(false);
+
+  function openProjectModal() {
+    document.getElementsByTagName("body")[0].style.overflow = "hidden";
+    setOpenProjects(true);
+  }
+
+  function closeProjectModal() {
+    setOpenProjects(false);
+  }
 
   function animateForClickedWork(current: string) {
 
@@ -454,6 +466,12 @@ export default function Home() {
             }
 
           </div>
+          <button
+            type="button"
+            onClick={() => openProjectModal()}
+          >
+            Ver mais
+          </button>
         </div>
       </section>
       <section id="section__contato">
@@ -492,6 +510,12 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {openProjects && (
+        <ProjetosModal
+          closeProjectModal={closeProjectModal}
+        />
+      )}
     </>
   );
 }
